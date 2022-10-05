@@ -1,0 +1,36 @@
+{
+  "name": "circleci-demo-project",
+  "version": "1.0.0",
+  "description": "Demo project for evaluating circleci pipeline",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "concurrently 'tsc --watch' 'nodemon -q dist/index.js'",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PieroNarciso/circleci-demo-project.git"
+  },
+  "keywords": [
+    "circleci",
+    "typescript",
+    "express"
+  ],
+  "author": "Piero Narciso",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PieroNarciso/circleci-demo-project/issues"
+  },
+  "homepage": "https://github.com/PieroNarciso/circleci-demo-project#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.14",
+    "@types/node": "^18.8.2",
+    "concurrently": "^7.4.0",
+    "nodemon": "^2.0.20",
+    "typescript": "^4.8.4"
+  }
+}
