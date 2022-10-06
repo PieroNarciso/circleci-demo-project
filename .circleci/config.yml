@@ -7,7 +7,7 @@ orbs:
   node: circleci/node@4.7
 
 jobs:
-  test_linter:
+  eslint_check:
     executor: node/default
     steps:
       - checkout
@@ -16,8 +16,17 @@ jobs:
       - run:
           command: npm run lint
           name: Run lint
+  test_check:
+    executor: node/default
+    steps:
+      - checkout
+      - node/install-packages:
+          pkg-manager: npm
+      - run:
+          command: npm run test
+          name: Run tests
 
 workflows:
   test_app:
     jobs:
-      - test_linter
+      - eslint_check
