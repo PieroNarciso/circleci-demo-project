@@ -27,6 +27,7 @@ jobs:
           name: Run tests
 
 workflows:
-  test_app:
+  lint_test:
     jobs:
       - eslint_check
+      - test_check
