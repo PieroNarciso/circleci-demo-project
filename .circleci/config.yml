@@ -29,7 +29,7 @@ jobs:
           name: Run tests
 
 workflows:
-  lint_test:
+  lint_test_build_deploy:
     jobs:
       - eslint_check
       - test_check
